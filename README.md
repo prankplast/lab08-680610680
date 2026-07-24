@@ -1,4 +1,4 @@
-# Lab 08 - Enrollment API (API #1)
+# Lab 08 - Enrollment API (API #2)
 
 ### ป้อนข้อมูลนักศึกษา
 
