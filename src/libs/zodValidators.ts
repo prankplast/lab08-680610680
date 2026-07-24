@@ -3,8 +3,10 @@ import { z } from "zod";
 ////// Course Validators //////
 
 export const zCourseId = z
-  .string()
-  .length(6, { message: "Course ID must be 6 digits." });
+  .coerce.number()
+  .int()
+  .min(100000, { message: "Course ID must be 6 digits." })
+  .max(999999, { message: "Course ID must be 6 digits." });
 const zCourseTitle = z
   .string()
   .min(6, { message: "Course title must be at least 6 charaters." });

@@ -16,7 +16,7 @@ const router = Router();
 // GET /api/v1/enrollments
 router.get("/", (req: Request, res: Response) => {
   try {
-    const courseId = req.query.courseNo;
+    const courseId = Number(req.query.courseNo);
     const student_Id = req.query.studentId;
 
     if ((courseId && student_Id) || (!courseId && !student_Id)) {
@@ -36,7 +36,7 @@ router.get("/", (req: Request, res: Response) => {
         });
       }
 
-      const foundEnrollments: Enrollment[] = enrollments.filter((e: Enrollment) => e.courseId == courseId);
+      const foundEnrollments: Enrollment[] = enrollments.filter((e: Enrollment) => e.courseId === courseId);
       let students1: Student[] = [];
 
       if (foundEnrollments.length === 0) {

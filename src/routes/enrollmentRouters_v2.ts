@@ -15,7 +15,7 @@ const router = Router();
 
 // DELETE /api/v2/enrollments
 router.delete("/", (request: Request, response: Response) => {
-  let course_Id: String = String(request.body.courseId) 
+	let course_Id = Number(request.body.courseId) 
 
 	const enrollmentBody = {
 		studentId: request.body.studentId,

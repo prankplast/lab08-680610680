@@ -31,7 +31,7 @@ router.get("/", (req: Request, res: Response) => {
 // GET /api/v2/courses/{courseId}
 router.get("/:courseId", (req: Request, res: Response) => {
   try {
-    const courseId = req.params.courseId;
+    const courseId = Number(req.params.courseId);
     const parseResult = zCourseId.safeParse(courseId);
 
     if (!parseResult.success) {
