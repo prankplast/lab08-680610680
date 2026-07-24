@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon --exec tsx src/index.ts",
-    "build": "tsc && tsc-alias",
+    "build": "npx tsc",
     "serve": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@11.13.1",
+  "packageManager": "pnpm@10.12.4",
   "type": "module",
   "dependencies": {
     "express": "^5.1.0",
